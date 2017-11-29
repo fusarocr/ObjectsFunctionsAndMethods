@@ -45,7 +45,8 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #          -- Write the names of three METHODs that Circle objects have:
 #               (Hint: Use the circle from the example3 function below with the dot trick to let PyCharm help you. )
-#
+#               circle._initialize_options(), circle._get_options_for_drawing()
+#               circle._get_coordinates_for_drawing()
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle objects have:
 #                fill color, outline color, and radius
