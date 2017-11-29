@@ -5,37 +5,38 @@ This module uses ROSEGRAPHICS to demonstrate:
   -- accessing their DATA via INSTANCE VARIABLES.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Christopher Fusaro.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   RUN this program.  Then answer the following,
 #     GETTING HELP AS NEED! (Ask questions!!!)
 #
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#              The top left corner.
 #
 #        -- In what direction on the screen does the positive X-axis point?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#              To the right of the screen.
 #
 #        -- In what direction on the screen does the positive Y-axis point?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#              Down towards the bottom of the screen.
 #
 #     b. Write a line of code that constructs a basic RoseWindow object:
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            window = rg.RoseWindow(width, height)
 #
+
 #     c. What is the default height of a RoseWindow?
 #        (Type the code shown in your answer above within main to see if PyCharm will help you figure out the answer.
 #         Hint: After you type the ( in the line of code, if you wait a moment PyCharm will add the ) and has a popup.)
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
-#
+#               300
+
 #     d. Write a line of code that construct a RoseWindow object whose height is 100 with any width you choose.
 #         (again try to use PyCharm's hints to help you figure it out)
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#               window = rg.RoseWindow(100,100)
 #
 #     e. Use the DOT trick to answer the following:
 #
@@ -77,11 +78,14 @@ def main():
     example1()
     example2()
     example3()
+    window = rg.RoseWindow(100,100)
+    window.close_on_mouse_click()
 
 
 def example1():
     """ Displays an empty window. """
     window = rg.RoseWindow(500, 300, 'Example 1: An empty window')
+
     window.close_on_mouse_click()
 
 
@@ -96,7 +100,7 @@ def example2():
     # Construct some rg.Point objects.
     # Note: the y-axis goes DOWN from the TOP.
     # ------------------------------------------------------------------
-    point1 = rg.Point(100, 150)
+    point1 = rg.Point(150, 150)
     point2 = rg.Point(200, 50)
 
     # ------------------------------------------------------------------
@@ -129,7 +133,7 @@ def example3():
     # Circle: needs its center and radius.
     # Has  fill_color  instance variable.
     # ------------------------------------------------------------------
-    center_point = rg.Point(300, 100)
+    center_point = rg.Point(100, 300)
     radius = 50
     circle = rg.Circle(center_point, radius)
     circle.fill_color = 'green'
