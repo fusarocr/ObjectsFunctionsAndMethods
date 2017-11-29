@@ -82,6 +82,7 @@ def main():
     turtle3()
     try_methods()
     try_functions()
+    try_methods_and_functions()
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
 
@@ -201,7 +202,7 @@ def try_functions():
 
 
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -246,8 +247,29 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+    emma = rg.SimpleTurtle()
+    emma.pen = rg.Pen('blue',5)
+
+    emma.backward(150)
+    emma.speed = 1
+    draw_many_squares(emma,2,100,30)
+
+    emma.speed = 5
+    emma.pen = rg.Pen('red',5)
+    draw_many_squares(emma,10,50,15)
+
+    emma.speed = 100
+    emma.pen = rg.Pen('blue',35)
+    draw_many_squares(emma,8,300,60)
+
+    emma.pen = rg.Pen('black', 3)
+
+    emma.backward(200)
+    emma.draw_circle(30)
+    emma.draw_square(50)
+
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
