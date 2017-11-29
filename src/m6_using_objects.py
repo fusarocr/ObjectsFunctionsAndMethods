@@ -15,6 +15,8 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     two_circles()
+    circle_and_rectangle()
+
 
 def two_circles():
     """
@@ -27,7 +29,7 @@ def two_circles():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # DONE: 2. Implement this function, per its doc-string above.
     #    -- ANY two rg.Circle objects that meet the criteria are fine.
     #    -- File  COLORS.txt  lists all legal color-names.
     # Put a statement in   main   to test this function
@@ -83,7 +85,7 @@ def circle_and_rectangle():
            150.0
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -91,6 +93,37 @@ def circle_and_rectangle():
     # IMPORTANT: Use the DOT TRICK to guess the names of the relevant
     #       instance variables for outline thickness, etc.
     # ------------------------------------------------------------------
+
+    window = rg.RoseWindow(300, 400)
+
+    center_point1 = rg.Point(100, 300)
+    radius1 = 50
+    circle = rg.Circle(center_point1, radius1)
+    circle.fill_color = 'blue'
+    circle.outline_thickness = 1
+    circle.attach_to(window)
+
+    point1 = rg.Point(150, 150)
+    point2 = rg.Point(100, 50)
+    rectangle = rg.Rectangle(point1, point2)
+    rectangle.fill_color = 'orange'
+    rectangle.outline_thickness = 1
+    rectangle.attach_to(window)
+
+    window.render()
+
+    print(rectangle.outline_thickness)
+    print('blue')
+    print('Point(100,300)')
+    print(100)
+    print(300)
+    print(circle.outline_thickness)
+    print('orange')
+    print('Point(100,50)')
+    print(100)
+    print(50)
+
+    window.close_on_mouse_click()
 
 
 def lines():
